@@ -62,6 +62,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
 
         mDiracUtils = new DiracUtils(getContext());
 
+        DiracUtils.initialize(getActivity());
         boolean enhancerEnabled = mDiracUtils.isDiracEnabled();
 
         mHeadsetType = (ListPreference) findPreference(PREF_HEADSET);

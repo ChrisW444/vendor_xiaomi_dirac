@@ -45,6 +45,7 @@ public final class DiracUtils {
         mContext = context;
         mMediaSessionManager = (MediaSessionManager) context.getSystemService(Context.MEDIA_SESSION_SERVICE);
         mDiracSound = new DiracSound(0, 0);
+        mInitialized = true;
     }
 
     public void onBootCompleted(){
@@ -126,7 +127,7 @@ public final class DiracUtils {
     }
 
     protected boolean isDiracEnabled() {
-        return mDiracSound.getMusic() == 1;
+        return mDiracSound != null && mDiracSound.getMusic() == 1;
     }
 
     protected void setLevel(String preset) {
