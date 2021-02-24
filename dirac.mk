@@ -13,6 +13,10 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 PRODUCT_PACKAGES += \
     XiaomiDirac \
 
+# Props ($PATH_PROP)
+TARGET_PRODUCT_PROP += $(VENDOR_PATH)/dirac.prop
+
+# Props
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.soundfx.dirac=true \
     persist.audio.dirac.speaker=true \
